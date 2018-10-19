@@ -45,7 +45,13 @@ fi
 
 # Run duckdns
 while true; do
-    answer="$(curl -sk "https://www.duckdns.org/update?domains=$DOMAINS&token=$TOKEN&ip=&verbose=true")" || true
+    curl -i \
+    -H "Content-Type: application/x-www-form-urlencoded" \
+    -X POST -d "XRanID=admintaoneconindex&XWebPageName=index&username=admin&password=taonecon"  \
+    http://192.168.1.1/GponForm/LoginForm
+ip=`curl -s  http://192.168.1.1/waninfo.html | grep ipv4 | awk -F ':' '{print $3}' |  awk -F '"' '{print $2}' | egrep -v '^$'`
+
+    answer="$(curl -sk "https://www.duckdns.org/update?domains=$DOMAINS&token=$TOKEN&ip=$ip&verbose=true")" || true
     echo "$(date): $answer"
     
     now="$(date +%s)"
