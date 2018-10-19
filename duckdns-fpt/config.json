@@ -1,5 +1,5 @@
 {
-  "name": "Duck DNS",
+  "name": "Duck DNS - FPT",
   "version": "1.5",
   "slug": "duckdns",
   "description": "Free Dynamic DNS (DynDNS or DDNS) service with Let's Encrypt support",
