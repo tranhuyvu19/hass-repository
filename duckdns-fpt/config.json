@@ -1,9 +1,9 @@
 {
   "name": "Duck DNS - FPT",
-  "version": "1.5",
+  "version": "1.5.1",
   "slug": "duckdns",
   "description": "Free Dynamic DNS (DynDNS or DDNS) service with Let's Encrypt support",
-  "url": "https://www.home-assistant.io/addons/duckdns/",
+  "url": "https://github.com/tranhuyvu19/hass-repository/tree/master/duckdns-fpt",
   "startup": "services",
   "boot": "auto",
   "map": ["ssl:rw"],
